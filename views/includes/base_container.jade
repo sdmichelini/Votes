@@ -1,0 +1,8 @@
+extends ./base_content.jade
+block content
+	if locals.error
+		.row.center-align
+			.col.s12.m6.offset-m3
+				.card.center-align| #{error}
+	else
+		block container

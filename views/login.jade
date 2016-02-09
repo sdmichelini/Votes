@@ -1,0 +1,29 @@
+extends ./includes/base.jade
+block content
+	.container-fluid
+		.row
+			.col-lg-12.background-red.text-white.col-xs-12
+				h1| Votes
+		.row
+			form.col-md-6.col-md-offset-3.col-sm-12.col-xs-12.well(method='post', action='/login')
+				if (locals.error && locals.error.length > 0)
+					.alert.alert-danger
+						span
+							b| Error: 
+							|#{locals.error}
+				if (locals.message && locals.message.length > 0)
+					.alert.alert-info
+						span
+							b| Message: 
+							|#{locals.message}
+				.form-group
+					label(for='email')| E-Mail Address
+					input(type='email', class='form-control', placeholder='E-Mail', id='email', name='email')
+				.form-group
+					label(for='password')| Password
+					input(type='password', class='form-control', placeholder='Password', id='password', name='password')
+				button(type='submit', class='btn btn-default')| Login
+		.row
+			.form.col-md-6.col-md-offset-3.col-sm-12.col-xs-12
+				p| If you need an account please contact the Secretary.
+				

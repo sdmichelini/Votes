@@ -1,0 +1,13 @@
+extends ./includes/base.jade
+
+block content
+	.container-fluid
+		.row
+			.col-lg-12.background-red.text-white.col-xs-12
+				h1| Votes
+		.row
+			.col-md-6.col-md-offset-3.col-sm-12.col-xs-12
+				- var greeting = (locals.name && (locals.name.length > 0)) ? locals.name : locals.email
+				h2| Welcome, #{greeting}.
+				p| There are currently no open votes.
+			
