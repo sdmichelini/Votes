@@ -38,3 +38,15 @@ Website that allows people to vote.
 
 - All platforms must be able to easily use Website
 - All features available on all platforms
+
+## Implementation ##
+
+### Routing ###
+
+- All in routes folder, secretary routes in separate folder
+
+### Views ###
+
+- Implemented in Jade
+- Make templates smart. Should never have a rendering error. Always notify user of error.
+- Bootstrap CSS 
